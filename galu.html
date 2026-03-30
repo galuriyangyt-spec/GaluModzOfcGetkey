@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MOD PANEL</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+}
+
+.header {
+    padding: 15px;
+    font-size: 20px;
+    color: #ff00ff;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px #00fff7;
+}
+
+.title {
+    font-size: 20px;
+    color: #ff00ff;
+    margin-bottom: 20px;
+}
+
+.box {
+    background: #1a1a1a;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+select {
+    background: transparent;
+    border: none;
+    color: #00fff7;
+    outline: none;
+}
+
+/* BUTTONS */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(45deg, #ff00ff, #00fff7);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-paid {
+    background: linear-gradient(45deg, #ffaa00, #ff5500);
+}
+
+.welcome {
+    margin: 10px;
+    padding: 10px;
+    background: #003333;
+    border-radius: 10px;
+    color: #00ffcc;
+}
+
+.result {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.key-box {
+    background: #111;
+    padding: 15px;
+    border-radius: 10px;
+    color: #00fff7;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.copy-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #00fff7, #ff00ff);
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">GALU MODZ OFC</div>
+
+<div class="welcome">🔥 Welcome User</div>
+
+<div class="container">
+    <div class="title">Create License - Global</div>
+
+    <div class="box">
+        <span>🎮 Game</span>
+        <select><option>Free Fire</option></select>
+    </div>
+
+    <div class="box">
+        <span>📱 Device</span>
+        <select><option>1 Device</option></select>
+    </div>
+
+    <div class="box">
+        <span>📅 DAYS</span>
+        <select>
+            <option>1 Day</option>
+            
+        </select>
+    </div>
+
+    <div class="box">
+        <span>💎 Price</span>
+        <select><option>FREE</option></select>
+    </div>
+
+    <!-- PAID PANEL BUTTON -->
+    <button class="btn btn-paid" onclick="openTelegram()">💰 PAID PANEL</button>
+
+    <!-- FREE BUTTON -->
+    <button class="btn" onclick="generateKey()">⚡ FREE GENERATE</button>
+
+    <!-- RESULT -->
+    <div class="result" id="resultBox">
+        <h3>Access Key Generated</h3>
+        <div class="key-box">GALU-8SLHH69N</div>
+        <button class="copy-btn" onclick="copyKey()">Copy Key</button>
+    </div>
+</div>
+
+<script>
+function generateKey() {
+    document.getElementById("resultBox").style.display = "block";
+}
+
+function copyKey() {
+    navigator.clipboard.writeText("GALU-8SLHH69N");
+    alert("Key Copied ✅");
+}
+
+function openTelegram() {
+    window.open("https://t.me/GaluReang", "_blank");
+}
+</script>
+
+</body>
+</html>
